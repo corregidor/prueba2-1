@@ -1,3 +1,5 @@
+#Prueba 2 Desafío Latam
+#repo https://github.com/tono77/prueba2.git
 
 def read_file()
   file = File.open('notas.csv', 'r')
