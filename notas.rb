@@ -1,3 +1,7 @@
+#Lee archivo de notas, lo mete en un hash de arreglos y realiza las operaciones:
+# - promedio y lo deja en un archivo
+# - cantidad total de ausencias
+# - alumnos aprobados
 
 def read_file()
   file = File.open('notas.csv', 'r')
