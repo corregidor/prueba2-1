@@ -1,5 +1,8 @@
-#Prueba 2 Desafío Latam
-#repo https://github.com/tono77/prueba2.git
+#Lee archivo de notas, lo mete en un hash de arreglos y realiza las operaciones:
+# - promedio y lo deja en un archivo
+# - cantidad total de ausencias
+# - alumnos aprobados
+
 
 def read_file()
   file = File.open('notas.csv', 'r')
@@ -10,17 +13,24 @@ def read_file()
      arr = linea.split(",")
      key = arr.shift
      notas =  arr.map { |e| e.to_i }
-
      hash[key] = notas
   end
   return hash
 end
 
-def average_tofile(hash)
+def average(hash)
+  arr = []
   hash.each do |key, value|
-    file = File.open("#{key}.txt", 'w')
     value.map! { |nota| nota == 0 ? 1 : nota}
-    file.puts "#{key}:#{value.sum / value.size.to_f}"
+    arr.push("#{key}" + ":" + "#{value.sum / value.size.to_f}")
+  end
+  return arr
+end
+
+def tofile(array)
+  array.each do |alumno|
+    file = File.open("#{alumno.split(':').first}.txt", 'w')
+    file.puts "#{alumno}"
     file.close
   end
 end
@@ -33,13 +43,10 @@ def absence_report(hash)
   return inasistencias.length
 end
 
-def approved(hash, nota)
+def approved(arr, nota)
   aprobados = []
-  hash.each do |key,value|
-    value.map! { |nota| nota == 0 ? 1 : nota}
-    promedio = value.sum / value.size.to_f
-    aprobados.push(key) if promedio >= nota
-  end
+  arr.each {|value| aprobados.push(value.split(':'))}
+  aprobados.select! {|alumno| alumno.last.to_f >= nota}
   return aprobados
 end
 
@@ -47,7 +54,7 @@ opt = 0
 NOTA = 5
 until opt == 4
   puts "\n\nIngresa una opcion [1-3], [4] para salir:"
-  puts '[1] Generar archivos de resultado'
+  puts '[1] Generar archivos de promedios'
   puts '[2] Inasistencias totales'
   puts '[3] Alumnos aprobados'
   puts "[4] Salir\n\n"
@@ -60,7 +67,7 @@ until opt == 4
   case opt
     when 1
       begin
-        average_tofile(hash)
+        tofile(average(hash))
       rescue
         puts 'Algo salió mal'
       else
@@ -70,7 +77,7 @@ until opt == 4
     when 2
       puts "El número de inasistencias fue: #{absence_report(hash)}"
     when 3
-      puts "Los alumnos aprobados fueron: #{approved(hash, NOTA)}"
+      puts "Los alumnos aprobados fueron: #{approved(average(hash), NOTA)}"
     when 4
       puts "designed in Labs"
       break
