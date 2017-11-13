@@ -45,9 +45,13 @@ end
 
 def approved(arr, nota)
   aprobados = []
+  str = ''
   arr.each {|value| aprobados.push(value.split(':'))}
   aprobados.select! {|alumno| alumno.last.to_f >= nota}
-  return aprobados
+  aprobados.each do |apro|
+    str += apro.first + ':' + apro.last + ' '
+  end
+  return str
 end
 
 opt = 0
