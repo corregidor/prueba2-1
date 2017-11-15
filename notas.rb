@@ -3,7 +3,6 @@
 # - cantidad total de ausencias
 # - alumnos aprobados
 
-
 def read_file()
   file = File.open('notas.csv', 'r')
   data = file.readlines.map(&:chomp)
@@ -72,8 +71,8 @@ until opt == 4
     when 1
       begin
         tofile(average(hash))
-      rescue
-        puts 'Algo salió mal'
+      rescue Exception => e
+        puts "Algo salió mal: #{e.message}"
       else
         puts 'Archivos generados'
       end
