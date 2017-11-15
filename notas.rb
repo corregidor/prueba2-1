@@ -26,9 +26,11 @@ def average(hash)
   return arr
 end
 
-def tofile(array)
+def tofile(archivo, array)
+  file = File.open(archivo, 'w')
+  file.close
   array.each do |alumno|
-    file = File.open("#{alumno.split(':').first}.txt", 'w')
+    file = File.open(archivo, 'a')
     file.puts "#{alumno}"
     file.close
   end
@@ -55,6 +57,7 @@ end
 
 opt = 0
 NOTA = 5
+ARCHIVO = 'promedio.txt'
 until opt == 4
   puts "\n\nIngresa una opcion [1-3], [4] para salir:"
   puts '[1] Generar archivos de promedios'
@@ -70,7 +73,7 @@ until opt == 4
   case opt
     when 1
       begin
-        tofile(average(hash))
+        tofile(ARCHIVO, average(hash))
       rescue Exception => e
         puts "Algo salió mal: #{e.message}"
       else
