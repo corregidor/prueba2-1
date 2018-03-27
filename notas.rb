@@ -21,10 +21,7 @@ def average(hash)
   arr = []
   hash.each do |key, value|
     value.map! { |nota| nota == 0 ? 1 : nota}
-    #arr.push("#{key}" + ":" + "#{value.sum / value.size.to_f}")   
-    #cambiar el value.sum por una funcion inject para que corra el codigo
-    #el cambio en este aspecto es el que hace que el código no corra para el item 1 y 3
-    #arr.push("#{key}" + ":" + "#{  value.inject(0){ |acc, e| acc + e } / value.size.to_f}")     
+    arr.push("#{key}" + ":" + "#{value.sum / value.size.to_f}")   
   end
   return arr
 end

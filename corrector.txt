@@ -21,12 +21,7 @@ Item 2 : Promedios por alumnos en archivo adicional
 
 a) Indentación correcta: 0.5
 b) Correcto uso del lenguaje: 0.5 
-c) Resolución del problema: 0.5
-Comentarios:
-Existe un error en una suma, que por arrastre involucra a otro método dentro 
-del código, como representa menos de una línea de código el descuento no quedará en cero.
-Debo destacar la utilización de métodos en inglés, que es una excelente práctica (faltan las
-variables en ingles), que por lo demás nadie más utilizó.
+c) Resolución del problema: 1.0
 
 Item 3 : Conteo de inasistencias totales en pantalla
 
@@ -40,9 +35,7 @@ a) Indentación correcta: 0.5
 b) Correcto uso del lenguaje: 0.5 
 c) Resolución del problema: 1.0
 Comentarios:
-Pese a no funcionar, el método es apropiado una vez resuelto el problema,
-no se aplicara una baja en la nota ya que se aplicó el descuento en la anterior pregunta
-y, además el alumno reutiliza código lo cual es una buena práctica.
+SE reutiliza código lo cual es una buena práctica.
 
 
 Item 5 : Salir
