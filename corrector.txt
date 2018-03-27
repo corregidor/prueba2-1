@@ -1,0 +1,56 @@
+La prueba consta de 5 items
+Cada item vale 2 puntos
+Dentro de cada item se espera:
+	a) Indentacion correcta : 0.5 pt
+	b) Correcto uso del lenguaje: 0.5 pt 
+	c) Resolución del problema: 1 pt
+
+
+Item 1 : Menu
+
+a) Indentación correcta: 0.5
+b) Correcto uso del lenguaje: 0.5 
+	Comentarios: 
+	No se considera para esta prueba, pero los nombres de las variables y métodos deben de ir en inglés
+c) Resolución del problema: 1.0
+	Comentarios:
+	Se resuelve todo lo pedido en el menú, código correcto
+	Otros comentarios:
+	Buena visualización del menú y mensajes apropiados
+	consejo: agregar un título al menú, se entiende mejor
+
+Item 2 : Promedios por alumnos en archivo adicional
+
+a) Indentación correcta: 0.5
+b) Correcto uso del lenguaje: 0.5 
+c) Resolución del problema: 1.0
+	Comentarios:
+	Se genera un archivo y cumple con las normas de puntuación requeridos,
+	además del espaciado entre elementos
+
+Item 3 : Conteo de inasistencias totales en pantalla
+
+a) Indentación correcta: 0.5
+b) Correcto uso del lenguaje: 0.5 
+c) Resolución del problema: 1.0
+	Comentarios:
+	Siempre se puede utilizar menos código para lo mismo (mini correccion en el archivo)
+
+Item 4 : Alumnos aprobados por pantalla
+
+a) Indentación correcta: 0.5
+b) Correcto uso del lenguaje: 0.5 
+c) Resolución del problema: 1.0
+	Comentarios:
+	Solución remasterizada en el ejercicio(ver nota)
+
+Item 5 : Salir
+
+a) Indentación correcta: 0.5
+b) Correcto uso del lenguaje: 0.5
+c) Resolución del problema: 1.0
+
+
+
+
+  
